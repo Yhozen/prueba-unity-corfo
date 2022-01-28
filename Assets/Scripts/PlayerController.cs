@@ -14,14 +14,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.B))
         {
-            anim.SetTrigger("Dance");
+            anim.SetTrigger("dance");
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
             anim.SetBool("walking", true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            anim.SetBool("walking", false);
         }
     }
 }
