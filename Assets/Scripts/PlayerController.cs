@@ -17,14 +17,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        this.handleAnimations();
-
-
+        applyMovement();
+        handleAnimations();
 
     }
 
+    void applyMovement()
+    {
+        float horizontalDelta = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float verticalDelta = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        transform.Translate(horizontalDelta, 0, verticalDelta);
 
+    }
     void handleAnimations()
     {
         if (Input.GetKeyDown(KeyCode.B))
