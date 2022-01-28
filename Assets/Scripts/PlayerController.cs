@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger("Dance");
         }
 
-
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            anim.SetBool("walking", true);
+        }
     }
 }
