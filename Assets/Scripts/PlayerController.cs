@@ -5,16 +5,28 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Animator anim;
+    public GameObject self;
+    public float speed = 10;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        self = GameObject.FindGameObjectsWithTag("Player")[0];
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        this.handleAnimations();
+
+
+
+    }
+
+
+    void handleAnimations()
+    {
         if (Input.GetKeyDown(KeyCode.B))
         {
             anim.SetTrigger("dance");
@@ -29,5 +41,6 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("walking", false);
         }
+
     }
 }
