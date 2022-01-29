@@ -26,6 +26,11 @@ public class PlayerAnimations : MonoBehaviour
             anim.SetTrigger("dance");
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("jump");
+        }
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             anim.SetBool("walking", true);
