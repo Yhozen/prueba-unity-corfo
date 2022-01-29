@@ -30,10 +30,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collison)
     {
-
         Debug.Log(collison.gameObject.tag);
 
+    }
+    private void OnTriggerEnter(Collider collider)
+    {
+        Debug.Log(collider.gameObject.tag);
 
     }
-
 }
