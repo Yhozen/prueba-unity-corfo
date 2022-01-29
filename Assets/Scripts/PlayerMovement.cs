@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public GameObject self;
+    public Rigidbody rigidbody;
     public float speed = 10;
     // Start is called before the first frame update
     void Start()
     {
-        self = GameObject.FindGameObjectsWithTag("Player")[0];
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -25,6 +25,14 @@ public class PlayerMovement : MonoBehaviour
         float horizontalDelta = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         float verticalDelta = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         transform.Translate(horizontalDelta, 0, verticalDelta);
+
+    }
+
+    private void OnCollisionEnter(Collision collison)
+    {
+
+        Debug.Log(collison.gameObject.tag);
+
 
     }
 
