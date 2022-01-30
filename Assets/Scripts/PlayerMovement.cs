@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody rigidbody;
-    public float speed = 10;
+    public float speed = 10f;
+    public float mouseSensitivity = 100f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         applyMovement();
-
+        mouseLook();
     }
 
     void applyMovement()
@@ -28,6 +30,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void mouseLook()
+    {
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        // float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        transform.Rotate(Vector3.up * mouseX);
+    }
     private void OnCollisionEnter(Collision collison)
     {
         Debug.Log(collison.gameObject.tag);
