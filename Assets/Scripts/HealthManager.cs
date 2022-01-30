@@ -12,18 +12,26 @@ public class HealthManager : MonoBehaviour
     void Start()
     {
         currentHealth = initialHealth;
-        
+
     }
 
-    public int getCurrentHealth() {
+    public int getCurrentHealth()
+    {
         return currentHealth;
     }
 
-    public void onReceiveAttack(int attack) {
+    public float getCurrentHealhPercentage()
+    {
+
+        return (float)currentHealth / (float)maxHealth * 100f;
+    }
+    public void onReceiveAttack(int attack)
+    {
         currentHealth -= attack;
         currentHealth = Mathf.Max(0, currentHealth);
     }
-    public void onReceiveHeal(int heal) {
+    public void onReceiveHeal(int heal)
+    {
         currentHealth += heal;
         currentHealth = Mathf.Min(maxHealth, currentHealth);
     }

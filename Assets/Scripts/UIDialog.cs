@@ -8,14 +8,15 @@ using TMPro;
 public class UIDialog : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Text TextObject;
+    public TextMeshProUGUI healthText;
     public TextMeshProUGUI points;
     public PointsManager pointsManager;
     public HealthManager healthManager;
+    public Image healthIndicator;
 
     void Start()
     {
-        TextObject.text = "test";
+        healthText.text = "test";
         points.text = "ala";
     }
 
@@ -23,6 +24,7 @@ public class UIDialog : MonoBehaviour
     void Update()
     {
         points.text = $"Points: {pointsManager.getCurrentPoints()}";
-        TextObject.text =  $"Health: {healthManager.getCurrentHealth()}";
+        healthText.text = $"Health: {healthManager.getCurrentHealth()}";
+        healthIndicator.fillAmount = healthManager.getCurrentHealhPercentage() / 100;
     }
 }

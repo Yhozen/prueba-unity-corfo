@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collison)
     {
-        Debug.Log(collison.gameObject.tag);
+        Debug.Log(collison.gameObject.tag + " collision");
 
     }
     private void OnTriggerEnter(Collider collider)
@@ -50,8 +50,6 @@ public class PlayerMovement : MonoBehaviour
             pointsManager.onGetCoin();
             healthManager.onReceiveAttack(10);
         }
-        int points =  pointsManager.getCurrentPoints();
-        Debug.Log($"hi {points}");
         Debug.Log(collider.gameObject.tag);
 
     }
