@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -13,6 +14,13 @@ public class HealthManager : MonoBehaviour
     {
         currentHealth = initialHealth;
 
+    }
+    void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     public int getCurrentHealth()
