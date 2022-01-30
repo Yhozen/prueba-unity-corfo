@@ -312,8 +312,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 230317933}
-  - component: {fileID: 230317932}
   - component: {fileID: 230317934}
+  - component: {fileID: 230317932}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -333,7 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2704638bb9599658ae3d048721a434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hola: {fileID: 8300000, guid: e5a765d776684be22900554692f65e68, type: 3}
+  oof: {fileID: 8300000, guid: e5a765d776684be22900554692f65e68, type: 3}
+  capoeira: {fileID: 8300000, guid: dc150318cf84e832e862af32078b11bd, type: 3}
   audioSource: {fileID: 0}
 --- !u!4 &230317933
 Transform:
