@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rigidbody;
     public float speed = 10f;
     public float mouseSensitivity = 100f;
+    public PointsManager pointsManager;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,13 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
+        if (collider.gameObject.tag == "Point")
+        {
+            Destroy(collider.gameObject);
+            pointsManager.onGetCoin();
+        }
+        int points =  pointsManager.getCurrentPoints();
+        Debug.Log($"hi {points}");
         Debug.Log(collider.gameObject.tag);
 
     }
