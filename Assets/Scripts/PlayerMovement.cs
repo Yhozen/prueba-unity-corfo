@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 10f;
     public float mouseSensitivity = 100f;
     public PointsManager pointsManager;
+    public HealthManager healthManager;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(collider.gameObject);
             pointsManager.onGetCoin();
+            healthManager.onReceiveAttack(10);
         }
         int points =  pointsManager.getCurrentPoints();
         Debug.Log($"hi {points}");

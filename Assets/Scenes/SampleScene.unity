@@ -1251,6 +1251,7 @@ GameObject:
   - component: {fileID: 1184578059}
   - component: {fileID: 1184578058}
   - component: {fileID: 1184578057}
+  - component: {fileID: 1184578061}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1340,6 +1341,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1184578061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184578056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f426aad98d42102088f97bbfb997c89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextObject: {fileID: 1598714071}
+  points: {fileID: 1204877802}
+  pointsManager: {fileID: 1924367413}
 --- !u!1 &1204877800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,7 +1368,7 @@ GameObject:
   - component: {fileID: 1204877803}
   - component: {fileID: 1204877802}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1399,8 +1415,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Points: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1614,7 +1630,6 @@ GameObject:
   - component: {fileID: 1598714070}
   - component: {fileID: 1598714072}
   - component: {fileID: 1598714071}
-  - component: {fileID: 1598714073}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -1683,19 +1698,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598714069}
   m_CullTransparentMesh: 1
---- !u!114 &1598714073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598714069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f426aad98d42102088f97bbfb997c89e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TextObject: {fileID: 1598714071}
 --- !u!1001 &1606513366
 PrefabInstance:
   m_ObjectHideFlags: 0

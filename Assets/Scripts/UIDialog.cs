@@ -11,6 +11,7 @@ public class UIDialog : MonoBehaviour
     public Text TextObject;
     public TextMeshProUGUI points;
     public PointsManager pointsManager;
+    public HealthManager healthManager;
 
     void Start()
     {
@@ -22,5 +23,6 @@ public class UIDialog : MonoBehaviour
     void Update()
     {
         points.text = $"Points: {pointsManager.getCurrentPoints()}";
+        TextObject.text =  $"Health: {healthManager.getCurrentHealth()}";
     }
 }
