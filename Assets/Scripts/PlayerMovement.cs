@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public Rigidbody rigidbody;
     public float speed = 10f;
     public float mouseSensitivity = 100f;
     public PointsManager pointsManager;
@@ -13,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
