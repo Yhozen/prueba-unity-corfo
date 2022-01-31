@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Options : MonoBehaviour
+{
+    public void onNameInputChange(string name)
+    {
+        PlayerPrefs.SetString("NAME", name);
+    }
+    public void onClickBack()
+    {
+        SceneManager.LoadScene("Init");
+    }
+    void OnDestroy()
+    {
+        PlayerPrefs.Save();
+        Debug.Log("Laaaa");
+    }
+}
