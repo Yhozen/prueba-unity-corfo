@@ -11,6 +11,8 @@ public class Init : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         if (PlayerPrefs.HasKey("NAME"))
         {
             string name = PlayerPrefs.GetString("NAME");
@@ -24,10 +26,15 @@ public class Init : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
 
     }
+
+    public void onClickOptions()
+    {
+        SceneManager.LoadScene("Options");
+
+    }
     public void onClickExit()
     {
         Application.Quit();
-
     }
 
 

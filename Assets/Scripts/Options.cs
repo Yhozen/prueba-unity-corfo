@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Options : MonoBehaviour
 {
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+
+    }
     public void onNameInputChange(string name)
     {
         PlayerPrefs.SetString("NAME", name);
