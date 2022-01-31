@@ -13,9 +13,15 @@ public class Options : MonoBehaviour
     {
         SceneManager.LoadScene("Init");
     }
+
+
+    public void setGraphicsLevel(int level)
+    {
+        QualitySettings.SetQualityLevel(level, true);
+
+    }
     void OnDestroy()
     {
         PlayerPrefs.Save();
-        Debug.Log("Laaaa");
     }
 }
