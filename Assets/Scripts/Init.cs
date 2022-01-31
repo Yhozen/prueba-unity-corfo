@@ -13,8 +13,9 @@ public class Init : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("NAME"))
         {
-
-            welcomeText.text = $"Welcome back, {PlayerPrefs.GetString("NAME")}";
+            string name = PlayerPrefs.GetString("NAME");
+            Debug.Log(name);
+            welcomeText.text = $"Welcome back, {name}";
         }
     }
 
